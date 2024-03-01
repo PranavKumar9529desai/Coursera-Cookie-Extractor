@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "Coursera Cookie Extractor",
+    "description": "Coursera Cookie Extractor is a simple extension that allows you to fetch cookies from the local storage and display them in the console. ",
+
+    "version": "1.0",
+    "permissions": [
+        "cookies",
+        "tabs"
+      ],
+      "action": {
+        "default_popup": "popups/popup.html",
+        
+        "default_title": "Coursera Cookie Extractor"
+    },
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "background": {
+        "service_worker": "service-worker.js"
+      },
+      "icons": {
+        "16": "icons/icon16.jpeg",
+        "19": "icons/icon19.jpeg",
+        "32": "icons/icon32.jpeg",
+        "38": "icons/icon38.jpeg",
+        "48": "icons/icon48.jpeg",
+        "128": "icons/icon128.jpeg"
+      },
+    
+     "content_scripts": [
+      {
+        "matches": ["https://www.coursera.org/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
