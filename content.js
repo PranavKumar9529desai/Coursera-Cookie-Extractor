@@ -1,4 +1,5 @@
 let cookie = {}
+let COOKIES = "" ;  
 chrome.runtime.sendMessage({action: 'getAllCookies'}, async function(response) {
     CookiesData =await (response.data) // Logs all cookies
     CookiesData.map(newData=>{
@@ -6,14 +7,25 @@ chrome.runtime.sendMessage({action: 'getAllCookies'}, async function(response) {
     
 });
 // putting the in the required format  
-const COOKIES = ("COOKIES=",JSON.stringify(cookie).replace(/"/g, "'"));
+COOKIES += JSON.stringify(cookie).replace(/"/g, "'");
 console.log("COOKIES = ",COOKIES);
-chrome.tabs.executeScript({
-    code : `navigator.clipboard.wriText(${COOKIES});`
- })
-
 });
 
-alert("Coursera Cookies are now copied on your clipboard , Check console for more details.");
+
+setTimeout(()=>{
+    navigator.clipboard.writeText(COOKIES)
+    .then(() => {
+      console.log("Text copied successfully!");
+    })
+    .catch((error) => {
+      console.error('Could not copy to clipboard:', error);
+    });
+  alert("Coursera Cookies are now copied on your clipboard , Check console for more details.");
+},3000)
+
+
+
+
+
 
 
