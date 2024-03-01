@@ -20,7 +20,7 @@ setTimeout(()=>{
     .catch((error) => {
       console.error('Could not copy to clipboard:', error);
     });
-  alert("Coursera Cookies are now copied on your clipboard , Check console for more details.");
+  alert("Coursera Cookies are now copied on your clipboard , Check the console for more details.");
 },3000)
 
 
