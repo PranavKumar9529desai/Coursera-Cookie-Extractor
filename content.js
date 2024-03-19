@@ -7,8 +7,8 @@ chrome.runtime.sendMessage({action: 'getAllCookies'}, async function(response) {
     
 });
 // putting the in the required format  
-COOKIES += JSON.stringify(cookie).replace(/"/g, "'");
-console.log("COOKIES = ",COOKIES);
+COOKIES += JSON.stringify(cookie).replace(/"/g, "'")+",";
+console.log("cookies : ",COOKIES);
 });
 
 
