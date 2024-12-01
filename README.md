@@ -34,6 +34,11 @@ To install the Coursera Cookie Extractor Chrome extension from the developer too
 
 6. You can now use the copied cookies in your Python scripts, browser extensions, or other applications to access Coursera resources programmatically.
 
+
+## Screenshots
+![image](https://github.com/user-attachments/assets/f2280276-81aa-416a-9d7e-758096166d6e)
+
+
 ## Disclaimer
 
 This extension is intended for educational and personal use only. Do not use it for any illegal activities or to violate Coursera's terms of service. Usage of this extension may be subject to legal consequences depending on your jurisdiction.
